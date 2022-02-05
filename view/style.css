@@ -1,0 +1,42 @@
+* {
+    background: #f2f2f2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 4200px;
+    width: 90%;
+    max-height: 900px;
+    height: 90%;
+    padding: 20px;
+}
+
+    form {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .png {
+        height: 100px;
+    }
+
+    .tiempo {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .imagen, .info {
+        margin: 0 4px 0 4px;
+    }
+
+    h1 {
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+    }
