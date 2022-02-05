@@ -3,8 +3,6 @@ const app = express();
 
 const PORT = 3000;
 
-
-
 app.use(express.static('view'));
 
 app.get('/',(req,res)=>{
@@ -14,5 +12,3 @@ app.get('/',(req,res)=>{
 app.listen(PORT,()=>{
     console.log('listening in http://localhost:'+PORT);
 });
-
-// Ay chiammo
