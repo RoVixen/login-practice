@@ -10,15 +10,18 @@
 <body>
     <div class="main">
 
-        <form class="login" action="">
+        <form class="login" method="post" id="loginform">
 
             <img class="png" src="img/sun.png" alt="">
             <h1 class="titulo" id="titulo">Weather App</h1>
             <input type="email" class="email" id="email" placeholder="Ingresa email">
             <input type="password" class="password" name="password" id="password" placeholder="Ingresa contraseña (mínimo 6 caracteres)">
             <input type="button" class="btn-login" id="btn-login" value="Login">
-        
+            <div id="mensaje"></div>
+
         </form>
+
+        <script src="js/login.js"></script>
 
     </div>
 </body>

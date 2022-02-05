@@ -2,21 +2,26 @@ const db = require("./db.js");
 
 const consultas={
     login:(req,res)=>{
-        db.q("SELECT * FROM users WHERE name = "+db.connection.escape(req.body.name),(results)=>{
+        console.log(req.body);
+
+        db.q("SELECT * FROM users WHERE email="+db.connection.escape(req.body.email),(results)=>{
+
             if(results.length==0)
                 return res.send({
-                    mensaje:"Wrong username"
+                    mensaje:"Wrong email"
                 });
             
             if(results.length>1)
                 return res.send({
-                    mensaje:"Este usuario esta repetido"
+                    mensaje:"Este email esta repetido"
                 });
             
             const userData=results[0];
-            if(userData.name!=req.body.name)
+            console.log(userData);
+
+            if(userData.email!=req.body.email)
                 return res.send({
-                    mensaje:"Este usuario... no entendi"
+                    mensaje:"Este email... no entendi"
                 });
             
             if(userData.password!=req.body.password)
@@ -25,7 +30,7 @@ const consultas={
                 });
             
             return res.send({
-                mensaje:"Bienvenido",
+                mensaje:"Bienvenido "+userData.name,
                 success:true
             });
         });
@@ -64,4 +69,4 @@ const consultas={
     }
 }
 
-//consultas.login({body:{name:"asdfa",password:"asdfa"}},{send:(obj)=>{console.log(obj);}});
+module.exports=consultas;
