@@ -16,7 +16,7 @@ function q(query,callback=(()=>{})){
             return;
         }
         
-        console.log(results);
+        //console.log(results);
         
         callback(results);
     });
@@ -33,8 +33,7 @@ q("CREATE TABLE IF NOT EXISTS `loginpractice`.`users` ("+
 ");");
 
 
-
 module.exports={
     q,
-    escape:connection.escape
+    connection
 }

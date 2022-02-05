@@ -16,8 +16,7 @@ app.get('/',(req,res)=>{
 });
 
 app.post("/api",(req,res)=>{
-    console.log(req.body)
-    
+    api[req.body.action](req,res);
 });
 
 app.listen(PORT,()=>{
