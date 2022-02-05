@@ -72,3 +72,11 @@ input {
     color: #fff;
     font-size: 18px;
 }
+
+.wfjojos {
+    width: 170px;
+    height: 200px;
+    top: 10px;
+    left: 10px;
+    position: fixed;
+}
